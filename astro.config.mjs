@@ -6,5 +6,8 @@ export default defineConfig({
   site: "https://artbrains.ru",
   trailingSlash: "always",
 
-  adapter: netlify(),
+  // adapter: netlify(),
+  adapter: node({
+    mode: 'standalone',
+  }),
 });
