@@ -1,0 +1,25 @@
+---
+
+---
+
+<section class="l-aside l-aside--right">
+  <ul>
+    <li>Далеко-далеко, за.</li>
+    <li>Над, своих?</li>
+    <li>Первую, над.</li>
+  </ul>
+</section>
+
+<style lang="scss">
+  @use "@styles/scss/abstracts/" as *;
+
+  .l-aside {
+    display: none;
+  }
+
+  .l-aside {
+    @include mediaUp("md") {
+      display: block;
+    }
+  }
+</style>

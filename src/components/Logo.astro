@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import logoSvg from "@public/logo.svg";
+
+const { className } = Astro.props;
+---
+
+<div class:list={[className, "c-logo"]}>
+  <a href="/" class="c-logo__link">
+    <Image src={logoSvg} alt="Логотип" class="c-logo__image" />
+    <span class="c-logo__text">ArtBrains</span>
+  </a>
+</div>
+
+<style lang="scss">
+  @use "../styles/scss/abstracts/" as *;
+
+  .c-logo {
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      gap: torem(8);
+      padding: torem(8);
+      text-decoration: none;
+    }
+
+    &--sitting-left &__link {
+      margin-left: torem(-8);
+    }
+
+    &__text {
+      font-family: var(--font-secondary, #000);
+      color: var(--clr-logo-text, #000);
+      font-size: torem(32);
+    }
+
+    &__image {
+      width: torem(40);
+      height: torem(40);
+    }
+  }
+</style>

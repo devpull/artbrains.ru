@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.l-container {
+  max-width: var(--layout-width-with-paddings);
+  margin: 0 auto;
+  padding-inline: var(--layout-padding);
+}

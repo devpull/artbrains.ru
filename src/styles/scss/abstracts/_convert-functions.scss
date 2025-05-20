@@ -1,0 +1,18 @@
+@use "vars";
+@use "sass:color";
+
+@function torem($pixels, $context: vars.$browser-context) {
+  @return #{calc($pixels / $context)}rem;
+}
+
+@function lh($pixels, $context: vars.$browser-context) {
+  @if($pixels <= vars.$browser-context) {
+    @return 1.15;
+  }
+
+  @return calc($pixels / $context);
+}
+
+@function em($pixels, $context: vars.$browser-context) {
+  @return #{calc($pixels / $context)}em;
+}

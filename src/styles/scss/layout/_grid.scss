@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.l-projects-and-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "projects",
+  ;
+  gap: torem(64) torem(96);
+
+  @include mediaUp('md') {
+    grid-template-areas:
+    "projects tags",
+  ;
+  }
+}
+
+.l-projects {
+  grid-area: projects;
+}

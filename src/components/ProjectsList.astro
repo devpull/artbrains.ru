@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import { formatDate } from "@utils/formatDate";
+
+// Get blog records collection
+const projects = await getCollection("projects", ({ data }) => {
+  return data.draft !== true;
+});
+// Sorting projects by date - newest are higher
+projects.sort(
+  (a, b) =>
+    Date.parse(b.data.pubDate.toString()) -
+    Date.parse(a.data.pubDate.toString())
+);
+---
+
+{
+  projects.map((project) => (
+    <article>
+      <a href={`/project/${project.data.slug}/`}>{project.data.title}</a>
+      <br />
+      <i>Опубликовано: {formatDate(project.data.pubDate)}</i>
+    </article>
+  ))
+}

@@ -1,0 +1,17 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import Aside from "@components/Aside.astro";
+
+type Props = CollectionEntry<'projects'>['data'];
+
+const { title, description, heading } = Astro.props;
+
+---
+
+<BaseLayout pageTitle={title} description={description}>
+  <main class="l-container">
+    <h1>{heading}</h1>
+    <slot />
+  </main>
+</BaseLayout>

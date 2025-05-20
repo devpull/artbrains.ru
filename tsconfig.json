@@ -1,0 +1,17 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "include": [".astro/types.d.ts", "**/*", "src/**/*"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@public/*": ["public/*"],
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "strictNullChecks": true, // добавьте, если используете шаблон `base`
+    "allowJs": true // обязательно, включено во всех шаблонах Astro
+  }
+}

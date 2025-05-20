@@ -1,0 +1,29 @@
+---
+import Favicon from "./Favicon.astro";
+
+const {
+  pageTitle = "Заказать быстрый сайт на artbrains.ru (по умолчанию)",
+  description = "Описание по умолчанию.",
+  ...props
+} = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="preload"
+    as="style"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+  <Favicon />
+</head>

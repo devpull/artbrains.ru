@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+:root {
+  --layout-width: #{torem($layout-width)};
+  --layout-padding: #{torem($layout-mobile-padding)};
+  --layout-content-width: #{torem($layout-content-width)};
+  --layout-sidebar-right-width: #{torem($layout-sidebar-right-width)};
+  --layout-width-with-paddings: calc(var(--layout-width) + var(--layout-padding) * 2);
+
+  --clr-white: #fff;
+  --clr-black: #121213;
+  
+  --font-primary: "Roboto", system-ui, sans-serif;  
+  --font-secondary: "Oswald", system-ui, sans-serif;
+  --clr-font: var(--clr-black);
+
+  --clr-logo-text: var(--clr-font);
+}

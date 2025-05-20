@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: var(--font-primary);
+  color: var(--clr-font, #000);
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  text-wrap: pretty;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-secondary);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: torem(24);
+
+  font-size: torem(56);
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: torem(-1.5);
+}
+
+p {
+  font-size: torem(20);
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}

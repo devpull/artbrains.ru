@@ -1,0 +1,16 @@
+---
+import Head from "../components/Head.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import "../styles/scss/global.scss";
+
+const { pageTitle, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ru">
+  <Head pageTitle={pageTitle} description={description} />
+  <body>
+    <SiteHeader />
+    <slot />
+  </body>
+</html>

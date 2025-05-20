@@ -1,0 +1,19 @@
+$break-points: (
+  sm: 600,
+  md: 900,
+  lg: 1200,
+  xl: 1800
+);
+
+$layout-width: 1110 !default; 
+$layout-desktop-padding: 32 !default;
+$layout-mobile-padding: 16 !default;
+$layout-content-width: calc($layout-width / 1.618) !default;
+$layout-sidebar-right-width: $layout-width - $layout-content-width !default;
+
+// Default font size
+$browser-context: 16 !default;
+
+$clr-primary-1: #4263EB !default;
+
+$size-border-radius: 8px !default;

@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "vars" as *;
+
+@mixin mediaUp($size) {
+  $mySize: map.get($break-points, $size);
+
+  @if map.has-key($break-points, $size) == false {
+    @warn "No such break point: \"#{$size}\"";
+  }
+
+  @media screen and (min-width: #{$mySize}px) {
+    @content;
+  }
+}
+
+@mixin mediaDown($size) {
+  $mySize: map.get($break-points, $size);
+
+  @if map.has-key($break-points, $size) == false {
+    @warn "No such break point: \"#{$size}\"";
+  }
+
+  @media screen and (max-width: #{$mySize}px) {
+    @content;
+  }
+}

@@ -1,0 +1,19 @@
+---
+import Aside from "../components/Aside.astro";
+import ProjectsList from "../components/ProjectsList.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {pageTitle, description, pageH1} from "../config/site.json";
+---
+
+<BaseLayout pageTitle={pageTitle} description={description}>
+  <div class="l-container">
+    <div class="l-projects-and-sidebar">
+      <section class="l-projects">
+        <h1>{pageH1}</h1>
+        <h2>Проекты</h2>
+        <ProjectsList />
+      </section>
+      <!-- <Aside /> -->
+    </div>
+  </div>
+</BaseLayout>
