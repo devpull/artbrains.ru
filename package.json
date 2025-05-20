@@ -10,6 +10,7 @@
   },
   "description": "",
   "dependencies": {
+    "@astrojs/netlify": "^6.3.3",
     "@astrojs/node": "^9.2.1",
     "astro": "^5.7.13",
     "autoprefixer": "^10.4.21",
